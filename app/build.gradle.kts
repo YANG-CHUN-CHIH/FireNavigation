@@ -32,6 +32,17 @@ android {
 }
 
 dependencies {
+    // CameraX Core Library
+    implementation("androidx.camera:camera-core:1.4.0")
+
+    // CameraX Lifecycle Integration
+    implementation("androidx.camera:camera-lifecycle:1.4.0")
+
+    // CameraX Camera2 Support (if needed)
+    implementation("androidx.camera:camera-camera2:1.4.0")
+
+    // CameraX Preview View (UI component to display the camera preview)
+    implementation("androidx.camera:camera-view:1.4.0")
 
     implementation(libs.appcompat)
     implementation(libs.material)

@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // To be implemented, server handling for visual navigation.
-                Intent intent = new Intent(MainActivity.this, VisualIndoorPositionActivity.class);
+                Intent intent = new Intent(MainActivity.this, VisualIndoorPosition.class);
                 startActivity(intent);
             }
         });
