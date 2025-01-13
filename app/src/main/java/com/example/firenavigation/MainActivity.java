@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnDataCollection;
     private Button btnIndoorPosition;
+    private Button btnDataCollectionVisual;
+    private Button btnIndoorPositionVisual;
 
     public static final String SERVER_IP = "192.168.0.182";
     public static final int SERVER_PORT = 34567;
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         sendMessagesToServer("Main Activity");
 
         btnDataCollection = findViewById(R.id.btnDataCollection);
-
         btnDataCollection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +61,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Activity mapping for visual navigation
+        btnDataCollectionVisual = findViewById(R.id.btnDataCollectionVisual);
+        btnDataCollectionVisual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // To be implemented, server handling for visual navigation.
+                Intent intent = new Intent(MainActivity.this, VisualDataCollectionActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnIndoorPositionVisual = findViewById(R.id.btnIndoorPositionVisual);
+        btnIndoorPositionVisual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // To be implemented, server handling for visual navigation.
+                Intent intent = new Intent(MainActivity.this, VisualIndoorPositionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
