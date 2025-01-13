@@ -154,6 +154,7 @@ public class IndoorPosition extends AppCompatActivity {
                         areaTextView.setText(message);
                         detectBtn.setEnabled(true); // Re-enable the button after receiving the message
                         isReceiving = false;
+                        mapView.invalidate();
                     });
                 } else {
                     System.out.println("No message received from server");
