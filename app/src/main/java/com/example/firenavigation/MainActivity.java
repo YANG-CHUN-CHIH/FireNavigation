@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnIndoorPosition;
     private Button btnDataCollectionVisual;
     private Button btnIndoorPositionVisual;
+    private Button btnDataCollection2;
 
     public static final String SERVER_IP = "192.168.0.182";
     public static final int SERVER_PORT = 34567;
@@ -61,6 +62,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnDataCollection2 = findViewById(R.id.btnDataCollection2);
+        btnDataCollection2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessagesToServer("Collection Mode");
+                Intent intent = new Intent(MainActivity.this, DataCollectionActivity2.class);
+                startActivity(intent);
+            }
+        });
+
         // Activity mapping for visual navigation
         btnDataCollectionVisual = findViewById(R.id.btnDataCollectionVisual);
         btnDataCollectionVisual.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     @Override
