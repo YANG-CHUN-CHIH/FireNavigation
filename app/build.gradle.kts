@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.firenavigation"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.firenavigation"
@@ -29,14 +29,30 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    // CameraX Core Library
+    implementation("androidx.camera:camera-core:1.4.0")
+
+    // CameraX Lifecycle Integration
+    implementation("androidx.camera:camera-lifecycle:1.4.0")
+
+    // CameraX Camera2 Support (if needed)
+    implementation("androidx.camera:camera-camera2:1.4.0")
+
+    // CameraX Preview View (UI component to display the camera preview)
+    implementation("androidx.camera:camera-view:1.4.0")
 
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
